@@ -16,6 +16,6 @@ Improvements that could be made:
   * Fish behaviour - my original idea was to have the fish swim away from the player, either off screen or behind the scenery.
   * More varieties of fish, more interesting spawning of fish (ex: more at once, different speeds).
   * I wanted to have the shark "rush" towards a fish when it was close to a fish to get a more dynamic, exciting feel.
-  * Unity rigidbody 2D physics is hard to tame and unsatisfying to play. For a game like this "realistic" physics is not required, so I would favour kinematic bodies over dynamic. 
+  * Unity rigidbody 2D physics is hard to tame and unsatisfying to play. For a game like, this "realistic" physics is not required, so I would favour kinematic bodies over dynamic. 
   * More visual and audio feedback.
   
