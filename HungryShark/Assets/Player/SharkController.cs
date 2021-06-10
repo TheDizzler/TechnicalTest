@@ -10,9 +10,9 @@ namespace LuvBug.HungryShark.Player
 		[SerializeField]
 		private GameManager gameManager = null;
 		[SerializeField]
-		private float maxHorizontalAcceleration = 5;
+		private float maxHorizontalAcceleration = 50;
 		[SerializeField]
-		private float maxVerticalAcceleration = 5;
+		private float maxVerticalAcceleration = 50;
 		[SerializeField]
 		private float maxHorizontalSpeed = 10;
 		[SerializeField]
@@ -48,23 +48,28 @@ namespace LuvBug.HungryShark.Player
 			if (Input.GetKey(KeyCode.D))
 			{
 				if (body.velocity.x < maxHorizontalSpeed)
-					body.AddForce(new Vector2(maxHorizontalAcceleration, 0));
+					body.AddForce(new Vector2(maxHorizontalAcceleration, 0) * Time.deltaTime);
 			}
 			else if (Input.GetKey(KeyCode.A))
 			{
 				if (body.velocity.x > -maxHorizontalSpeed)
-					body.AddForce(new Vector2(-maxHorizontalAcceleration, 0));
+					body.AddForce(new Vector2(-maxHorizontalAcceleration, 0) * Time.deltaTime);
 			}
 
 			if (Input.GetKey(KeyCode.W))
 			{
 				if (body.velocity.y < maxVerticalSpeed)
-					body.AddForce(new Vector2(0, maxVerticalAcceleration));
+					body.AddForce(new Vector2(0, maxVerticalAcceleration) * Time.deltaTime);
 			}
 			else if (Input.GetKey(KeyCode.S))
 			{
 				if (body.velocity.y > -maxVerticalSpeed)
-					body.AddForce(new Vector2(0, -maxVerticalAcceleration));
+					body.AddForce(new Vector2(0, -maxVerticalAcceleration) * Time.deltaTime);
+			}
+
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				Application.Quit();
 			}
 
 			if (body.velocity.x > 0)
