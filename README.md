@@ -1,5 +1,6 @@
 # TechnicalTest
 My approach was to build the basic game mechanics around art that would convey the final, kid-friendly tone of the product.
+The design uses colorful pictures with easily recognizable shapes. In retrospect, this is probably too childish for the target age group of 7-8.
 All art was from free-to-use clipart found online.
 
 Some issues that would need to be addressed:
